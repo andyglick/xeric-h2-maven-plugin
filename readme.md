@@ -42,15 +42,25 @@ If phases are not specified, the default phases are chosen.
 
 Goals
 -----
-Goal    | Description                                    | Default Phase   
-------- | ---------------------------------------------  | ----------------------
-h2-start| Starts an h2 instance                          | pre-integration-test
-h2-stop | Stops the h2 instance started by h2-start goal | post-integration-test
-help    | Displays help                                  | N.A.        
+
+#### h2-start
+Starts an h2 instance. This goal is bound to `pre-integration-test` phase by default.
+
+#### h2-stop
+Stops the h2 instance started by `h2-start` goal. This goal is bound to `post-integration-test` by default.
+
+#### help
+Displays help.
 
 Example
 --------
-Checkout a simple [example](/test)
+Checkout a simple example in the test folder.
+
+References
+----------
+1. [Writing a custom plugin](http://books.sonatype.com/mvnref-book/reference/writing-plugins-sect-custom-plugin.html) from Maven: The complete reference.
+2. [H2 Tutorial](http://www.h2database.com/html/tutorial.html)
+
 
 
 
