@@ -7,7 +7,7 @@ A maven plugin to start and stop an [h2](http://www.h2database.com/) instance. I
 
 Configuration
 --------------
-Add the following to your pom.xml under build/plugins/
+Add the following to your pom.xml under build->plugins tag.
 
     ::::xml
     <plugin>
@@ -42,11 +42,11 @@ If phases are not specified, the default phases are chosen.
 
 Goals
 -----
-| Goal    | Description                                    | Default Phase          |
-|-----------------------------------------------------------------------------------|
-| h2-start| Starts an h2 instance                          | pre-integration-test   |
-| h2-stop | Stops the h2 instance started by h2-start goal | post-integration-test  |
-| help    | Displays help                                  | N.A.                   |
+Goal    | Description                                    | Default Phase   
+------- | ---------------------------------------------  | ----------------------
+h2-start| Starts an h2 instance                          | pre-integration-test
+h2-stop | Stops the h2 instance started by h2-start goal | post-integration-test
+help    | Displays help                                  | N.A.        
 
 Example
 --------
