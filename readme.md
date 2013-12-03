@@ -10,33 +10,44 @@ Configuration
 Add the following to your pom.xml under build->plugins tag.
 
     ::::xml
-    <plugin>
-        <groupId>net.xeric.maven</groupId>
-        <artifactId>h2-maven-plugin</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <configuration>
-            <args>
-                <arg>-tcp</arg>
-                <arg>-tcpAllowOthers</arg>
-                <arg>-tcpPort</arg>
-                <arg>5555</arg>
-            </args>
-        </configuration>
-        <executions>
-            <execution>
-                <phase>pre-integration-test</phase>
-                <goals>
-                    <goal>h2-start</goal>
-                </goals>
-            </execution>
-            <execution>
-                <phase>post-integration-test</phase>
-                <goals>
-                    <goal>h2-stop</goal>
-                </goals>
-            </execution>
-        </executions>
-    </plugin>
+    <build>
+        ...
+        <plugins>
+            <plugin>
+                <groupId>net.xeric.maven</groupId>
+                <artifactId>h2-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+               <configuration>
+                    <args>
+                        <arg>-tcp</arg>
+                        <arg>-tcpAllowOthers</arg>
+                        <arg>-tcpPort</arg>
+                        <arg>5555</arg>
+                    </args>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>h2-start</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>h2-stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    <build>        
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 If phases are not specified, the default phases are chosen.
 

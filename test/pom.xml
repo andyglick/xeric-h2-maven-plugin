@@ -69,4 +69,14 @@
             </plugin>
         </plugins>
     </build>
+    
+    <pluginRepositories>
+      <pluginRepository>
+        <id>sonatype-nexus-staging</id>
+        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        <releases>
+          <enabled>false</enabled>
+        </releases>
+      </pluginRepository>
+    </pluginRepositories>
 </project>

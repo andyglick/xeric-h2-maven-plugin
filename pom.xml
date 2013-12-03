@@ -6,7 +6,29 @@
     <packaging>maven-plugin</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>h2 Maven Mojo</name>
-    <url>http://maven.apache.org</url>
+    <description>A maven plugin to start and stop h2 based tcp server</description>
+    <licenses>
+      <license>
+        <name>The Apache Software License, Version 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      </license>
+    </licenses>
+    <url>http://bitbucket.org/xeric/</url>
+    <organization>
+      <name>Xeric Corporation</name>
+      <url>http://xeric.net</url>
+    </organization>
+    <parent>
+      <groupId>org.sonatype.oss</groupId>
+      <artifactId>oss-parent</artifactId>
+      <version>7</version>
+    </parent>
+
+    <scm>
+      <connection>scm:https://tawus@bitbucket.org/xeric/simple-retro.git</connection>
+      <url>https://tawus@bitbucket.org/xeric/simple-retro.git</url>
+    </scm>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.maven</groupId>
