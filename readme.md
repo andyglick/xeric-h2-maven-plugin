@@ -67,6 +67,16 @@ Example
 --------
 Checkout a simple example in the test folder.
 
+You can also run the goals from command line using the h2 prefix
+
+    mvn h2:h2-start
+
+e.g. if you want to start a h2 instance right before running jetty server, you can run it as
+
+    mvn h2:h2-start jetty:run
+
+(it assumes you have also included maven-jetty-plugin in your pom.xml)
+
 References
 ----------
 1. [Writing a custom plugin](http://books.sonatype.com/mvnref-book/reference/writing-plugins-sect-custom-plugin.html) from Maven: The complete reference.
