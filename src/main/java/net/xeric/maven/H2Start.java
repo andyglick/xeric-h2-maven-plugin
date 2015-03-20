@@ -20,21 +20,26 @@ import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.h2.tools.Server;
+import org.sonatype.inject.Parameters;
 
 
 /**
  * Starts an instance of h2 server based on the <code>args</code>
  * configuration parameters.
+ * @goal h2-start
+ * @phase pre-integration-test
  */
 public class H2Start extends AbstractMojo {
 
     /**
      * H2 Database connection string for a tcp based connection.
+     * @parameter
      */
     private String[] args;
 
     @SuppressWarnings("unchecked")
     public void execute() throws MojoExecutionException, MojoFailureException {
+
         List<String> argList = Arrays.asList(args);
 
         try {
