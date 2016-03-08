@@ -4,7 +4,7 @@
     <groupId>net.xeric.maven</groupId>
     <artifactId>h2-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>1.2</version>
+    <version>1.4</version>
     <name>h2 Maven Mojo</name>
     <description>A maven plugin to start and stop h2 based tcp server</description>
     <licenses>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.186</version>
+            <version>1.4.191</version>
         </dependency>
     </dependencies>
 
